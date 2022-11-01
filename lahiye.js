@@ -1,30 +1,18 @@
 let myNodelist = document.getElementsByTagName("LI");
 let i;
-for (i = 0; i < myNodelist.length; i++) {
-    let span = document.createElement("SPAN");
-    let txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    myNodelist[i].appendChild(span);
-}
+
+const sortButton = document.querySelector('#myDIV>img')
+
+console.log(sortButton)
+
+let liElements = document.getElementById('myUL')
 
 
-let close = document.getElementsByClassName("close");
-
-for (let i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-        let div = this.parentElement;
-        div.style.display = "none";
+liElements.addEventListener("click", (e) => {
+    if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove()
     }
-}
-
-
-let list = document.querySelector('ul');
-list.addEventListener('click', function (ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
-    }
-}, false);
+})
 
 
 function newElement() {
@@ -51,4 +39,20 @@ function newElement() {
             div.style.display = "none";
         }
     }
+
 }
+sortButton.addEventListener("click", () => {
+    let ar = []
+    const data = [...liElements?.children]
+    data.forEach(item => {
+        ar.push(item.innerHTML)
+    })
+    ar.sort();
+    liElements.innerHTML = ""
+    ar.forEach(item => {
+        let li = `<li>${item}</li>`
+
+        liElements.innerHTML += li
+    })
+})
+
