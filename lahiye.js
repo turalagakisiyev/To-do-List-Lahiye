@@ -3,8 +3,6 @@ let i;
 
 const sortButton = document.querySelector('#myDIV>img')
 
-console.log(sortButton)
-
 let liElements = document.getElementById('myUL')
 
 
@@ -41,7 +39,12 @@ function newElement() {
     }
 
 }
+
+
+
 sortButton.addEventListener("click", () => {
+
+
     let ar = []
     const data = [...liElements?.children]
     data.forEach(item => {
@@ -54,5 +57,52 @@ sortButton.addEventListener("click", () => {
 
         liElements.innerHTML += li
     })
+
+
 })
 
+
+
+
+
+let sekil1 = document.querySelector('.sekil2')
+
+sekil1.addEventListener("click", () => {
+
+    let ar = []
+    const data = [...liElements?.children]
+    data.forEach(item => {
+        ar.push(item.innerHTML)
+    })
+    ar.sort();
+    ar.reverse();
+    liElements.innerHTML = ""
+    ar.forEach(item => {
+        let li = `<li>${item}</li>`
+
+        liElements.innerHTML += li
+    })
+
+})
+
+
+
+sekil1.addEventListener("click", () => {
+    sortButton.style.display = "block";
+    sekil1.style.display = "none";
+    let arr = [];
+    list.push(arr);
+    arr.forEach((item) => {
+        item.sort();
+        item.reverse();
+    });
+})
+
+
+if (
+    sortButton.addEventListener("click", () => {
+        sekil1.style.display = "block";
+        sortButton.style.display = "none";
+    })
+) {
+}
