@@ -13,10 +13,11 @@ body {
 .main {
     border: 1px solid #C4C4C4;
     border-radius: 10px;
-
+    box-shadow: 2px 2px 10px black;
     width: 30%;
     margin: auto;
     padding-bottom: 20px;
+
 }
 
 .yellow {
@@ -36,7 +37,7 @@ input {
     width: 80%;
     margin-left: 10%;
     margin-bottom: 20px;
-    
+    box-shadow: 1px 1px 5px black;
 }
 
 input:hover {
@@ -54,6 +55,7 @@ input:hover {
     margin: auto;
     display: flex;
     margin-top: 20px;
+    box-shadow: 1px 1px 5px black;
 
 }
 
@@ -69,6 +71,7 @@ button {
     border-radius: 71px;
     border: none;
     color: white;
+    
 }
 
 button:hover {
@@ -90,6 +93,7 @@ ul {
     width: 80%;
     margin: auto;
     background-color: #ffbc40;
+    box-shadow: 1px 1px 5px black;
 }
 
 ul li {
@@ -101,6 +105,7 @@ ul li {
     padding-top: 7px;
     background-color: white;
     overflow: hidden;   
+    box-shadow: 1px 1px 10px black;
 }
 
 ul li:hover {
@@ -118,6 +123,7 @@ ul li:hover {
     color: #858282;
     margin-right: 5px;
     font-weight: 900;
+    box-shadow: 1px 1px 5px black;
 }
 .close:hover {
     background-color: rgba(0, 0, 0, 0.295);
